@@ -30,8 +30,9 @@
     <body>
         <main>
             <p>baseado em nosso <a href="/forms/1.html">primeiro experimento</a>:</p>
-            <p id="pi">&pi; = <span data-dec="5" class="correct">3.14159</span><span class="incorrect">00000</span></p>
-            <p>(atualmente, há 10 respostas)</p>
+            <?php $data = json_decode(file_get_contents('https://drive.usercontent.google.com/uc?id=1Likj_YdLFcihcRMrt1tWZjfl89xhy9_O&export=download')); ?>
+            <p id="pi">&pi; = <span data-dec="<?php echo $data->decimals?>" class="correct">3.<?php echo $data->correct?></span><span class="incorrect"><?php echo $data->incorrect?></span></p>
+            <p>(atualmente, há <?php echo $data->answers?> respostas)</p>
         </main>
         <footer>
             <p>este projeto foi orgulhosamente produzido por <a class="signature" href="https://tresdoug.com">Douglas Speck</a></p>

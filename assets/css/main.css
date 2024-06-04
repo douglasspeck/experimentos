@@ -86,13 +86,14 @@ main {
 }
 
 #pi .correct::after {
-    content: 'casas decimais corretas';
+    content: attr(data-dec) ' casas decimais corretas';
     font-size: 1rem;
     display: block;
     position: absolute;
     top: 4em;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
     text-align: center;
 }
 

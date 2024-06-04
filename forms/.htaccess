@@ -1,2 +1,0 @@
-RewriteCond %{HTTP_HOST} ^forms\.experimento\.online
-RewriteRule ^(.*)$ http://experimento.online/assets/$1 [R=301]

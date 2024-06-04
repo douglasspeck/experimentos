@@ -40,6 +40,32 @@ html, body {
     left: -100%;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 0;
+    font-family: var(--main-font);
+    font-weight: bold;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+header > nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50%;
+    color: var(--blue);
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -47,6 +73,7 @@ main {
     justify-content: center;
     width: 90vw;
     margin: 0 auto;
+    text-align: center;
 }
 
 #pi {
@@ -76,12 +103,10 @@ main {
 #pi .correct::before {
     content: '';
     position: absolute;
-    top: 1em;
     left: 2.5%;
     width: 95%;
     height: 0.25em;
     border: 3px solid var(--highcolor);
-    border-top: none;
     box-sizing: border-box;
 }
 
@@ -90,7 +115,6 @@ main {
     font-size: 1rem;
     display: block;
     position: absolute;
-    top: 4em;
     left: 50%;
     transform: translateX(-50%);
     width: max-content;
@@ -118,4 +142,46 @@ footer > p {
     font-family: var(--handwritten-font);
     color: var(--blue);
     font-size: 1.3em;
+}
+
+@media screen and (orientation: landscape) {
+    
+    #pi .correct::before {
+        top: 1em;
+        border-top: none;
+    }
+    
+    #pi .correct::after {
+        top: 4em;
+    }
+
+}
+
+@media screen and (orientation: portrait) {
+
+    #pi {
+        padding: 1em 0 0.5em;
+    }
+    
+    #pi .correct::before {
+        bottom: 1em;
+        border-bottom: none;
+    }
+    
+    #pi .correct::after {
+        bottom: 4em;
+    }
+
+    footer {
+        hyphens: auto;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto 5%;
+        font-size: 0.75em;
+    }
+
+    footer > p {
+        flex-direction: column;
+    }
+
 }

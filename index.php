@@ -28,6 +28,13 @@
         <link rel="stylesheet" href="/assets/css/main.css?t=<?php echo date('YmdHis'); ?>" type="text/css">
     </head>
     <body>
+        <header>
+            <h1>exp.online</h1>
+            <nav>
+                <a href="/">home</a>
+                <a href="/forms/">forms</a>
+            </nav>
+        </header>
         <main>
             <p>baseado em nosso <a href="/forms/1.html">primeiro experimento</a>:</p>
             <?php $data = json_decode(file_get_contents('https://drive.usercontent.google.com/uc?id=1Likj_YdLFcihcRMrt1tWZjfl89xhy9_O&export=download')); ?>

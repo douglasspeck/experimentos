@@ -20,7 +20,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&family=Not+Sans:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
 
         <!-- Stylesheets -->
 
@@ -30,11 +30,11 @@
     <body>
         <main>
             <p>baseado em nosso <a href="/forms/1.html">primeiro experimento</a>:</p>
-            <p>&pi;=<span class="correct">3.14159</span><span class="incorrect">00000</span></p>
+            <p id="pi">&pi; = <span data-dec="5" class="correct">3.14159</span><span class="incorrect">00000</span></p>
             <p>(atualmente, há 10 respostas)</p>
         </main>
         <footer>
-            <p>este projeto foi orgulhosamente produzido por <a href="https://tresdoug.com">Douglas Speck</a></p>
+            <p>este projeto foi orgulhosamente produzido por <a class="signature" href="https://tresdoug.com">Douglas Speck</a></p>
         </footer>
     </body>
 </html>

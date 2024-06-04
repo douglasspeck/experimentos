@@ -1,10 +1,9 @@
 :root {
-    --light-green: #99D98C;
-    --keppel: #52B69A;
-    --indigo-dye: #184E77;
-    --c1: var(--light-green);
-    --c2: var(--keppel);
-    --c3: var(--indigo-dye);
+    --red-ish: #B65077;
+    --green: #52B69A;
+    --blue: #184E77;
+    --gray: #222222;
+    --light-gray: #EEEEEE;
     --main-font: 'Noto Sans', sans-serif;
     --body-font: 'Martel', serif;
     --handwritten-font: 'Shadows Into Light Two';
@@ -17,6 +16,11 @@ html, body {
     padding: 0;
     scroll-behavior: smooth;
     font-family: var(--body-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-gray);
+    color: var(--gray);
 }
 
 * {
@@ -34,4 +38,83 @@ html, body {
     position: absolute;
     top: 0;
     left: -100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+#pi {
+    font-size: 4em;
+    line-height: 1em;
+    padding: 0.5em 0 1em;
+    width: 100%;
+    text-align: center;
+    text-wrap: wrap;
+}
+
+#pi .correct {
+    --highcolor: var(--green);
+}
+
+#pi .incorrect {
+    --highcolor: var(--red-ish);
+}
+
+#pi span {
+    position: relative;
+    display: inline-block;
+    color: var(--highcolor);
+    text-wrap: wrap;
+}
+
+#pi .correct::before {
+    content: '';
+    position: absolute;
+    top: 1em;
+    left: 2.5%;
+    width: 95%;
+    height: 0.25em;
+    border: 3px solid var(--highcolor);
+    border-top: none;
+    box-sizing: border-box;
+}
+
+#pi .correct::after {
+    content: 'casas decimais corretas';
+    font-size: 1rem;
+    display: block;
+    position: absolute;
+    top: 4em;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--main-font);
+}
+
+footer > p {
+    display: flex;
+    align-items: center;
+    gap: 0.5ch;
+}
+
+.signature {
+    font-family: var(--handwritten-font);
+    color: var(--blue);
+    font-size: 1.3em;
 }

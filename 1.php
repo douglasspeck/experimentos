@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
-        <title>Formulários de Coleta</title>
+        <title>exp.online</title>
         
         <!-- META TAGS -->
         <meta charset="UTF-8">
@@ -12,8 +12,8 @@
 
         <!-- SEO -->
         <meta name="author" content="Douglas Speck">
-        <meta name="description" content="Índice de coletas do exp.online">
-        <link rel="canonical" href="https://forms.experimentos.online">
+        <meta name="description" content="Experimentos Online construídos de forma coletiva para divulgar conhecimentos matemáticos">
+        <link rel="canonical" href="https://experimentos.online">
         <meta name=”robots” content="index, nofollow">
         <meta name="googlebot" content="index, nofollow">
 
@@ -28,10 +28,21 @@
         <link rel="stylesheet" href="/assets/css/main.css?t=<?php echo date('YmdHis'); ?>" type="text/css">
     </head>
     <body>
-        <h1>Formulários de Coleta</h1>
-        <p>Sua curiosidade te trouxe até aqui, mas não há muito para ver. Acesse um de nossos experimentos abaixo:</p>
-        <ul>
-            <li><a href="1">Experimento 1: Projeto Interativo (PI)</a></li>
-        </ul>
+        <header>
+            <h1>exp.online</h1>
+            <nav>
+                <a href="/">home</a>
+                <a href="/forms/">forms</a>
+            </nav>
+        </header>
+        <main>
+            <p>baseado em nosso <a href="/forms/1.html">primeiro experimento</a>:</p>
+            <?php $data = json_decode(file_get_contents('https://drive.usercontent.google.com/uc?id=1Likj_YdLFcihcRMrt1tWZjfl89xhy9_O&export=download')); ?>
+            <p id="pi">&pi; = <span data-dec="<?php echo $data->decimals?>" class="correct">3.<?php echo $data->correct?></span><span class="incorrect"><?php echo $data->incorrect?></span></p>
+            <p>(atualmente, há <?php echo $data->answers?> respostas)</p>
+        </main>
+        <footer>
+            <p>este projeto foi orgulhosamente produzido por <a class="signature" href="https://tresdoug.com">Douglas Speck</a></p>
+        </footer>
     </body>
 </html>

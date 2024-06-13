@@ -121,6 +121,11 @@ main {
     text-align: center;
 }
 
+main a {
+    font-weight: bold;
+    color: var(--blue);
+}
+
 footer {
     position: fixed;
     bottom: 0;

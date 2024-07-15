@@ -40,6 +40,10 @@ html, body {
     left: -100%;
 }
 
+strong {
+    font-weight: bolder;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -121,6 +125,42 @@ main {
     text-align: center;
 }
 
+#gallery {
+    display: flex;
+    gap: 2em;
+    margin-top: 2em;
+    padding-bottom: 1em;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 80vw;
+}
+
+#gallery > a > article {
+    --highcolor: var(--red-ish);
+    width: 30vh;
+    height: 30vh;
+    border: 2px solid var(--highcolor);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    font-size: 1.5em;
+    background-color: transparent;
+    color: var(--highcolor);
+    transition: all 0.15s linear;
+}
+
+#gallery > a > article:hover {
+    background-color: var(--highcolor);
+    color: #fff;
+}
+
+#gallery > a > article.open {
+    --highcolor: var(--green);
+}
+
 main a {
     font-weight: bold;
     color: var(--blue);
@@ -175,6 +215,13 @@ footer > p {
     
     #pi .correct::after {
         bottom: 4em;
+    }
+
+    #gallery {
+        max-height: 60vh;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     footer {

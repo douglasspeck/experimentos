@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
-        <title>exp.online</title>
+        <title>experimento 1</title>
         
         <!-- META TAGS -->
         <meta charset="UTF-8">
@@ -12,8 +12,8 @@
 
         <!-- SEO -->
         <meta name="author" content="Douglas Speck">
-        <meta name="description" content="Experimentos Online construídos de forma coletiva para divulgar conhecimentos matemáticos">
-        <link rel="canonical" href="https://experimentos.online">
+        <meta name="description" content="Primeiro Experimento Colaborativo promovido pela Olimpíada de Matemática da Unicamp">
+        <link rel="canonical" href="https://experimentos.online/1">
         <meta name=”robots” content="index, nofollow">
         <meta name="googlebot" content="index, nofollow">
 
@@ -37,13 +37,12 @@
         </header>
         <main>
             <p>baseado em nosso <a href="/forms/1.html">primeiro experimento</a>:</p>
-            <?php $data = json_decode(file_get_contents('https://drive.usercontent.google.com/uc?id=1Likj_YdLFcihcRMrt1tWZjfl89xhy9_O&export=download')); ?>
-            <p id="pi">&pi; = <span data-dec="<?php echo $data->decimals?>" class="correct">3.<?php echo $data->correct?></span><span class="incorrect"><?php echo $data->incorrect?></span></p>
-            <p>(atualmente, há <?php echo $data->answers?> respostas)</p>
-            <p>para entender mais sobre o projeto, acesse <a href="https://docs.google.com/presentation/d/1oplGx_sFYBkhc1CMc4wUAJZ9IaUa3SkYw1gY3jbOUmU/present">nosso guia</a>.</p>
+            <p id="pi">&pi; = 3.<span data-dec="2" class="correct">14</span><span class="incorrect">754804368767736000</span></p>
+            <p>(esse experimento está encerrado e contou com <strong>282</strong> respostas)</p>
+            <p>para entender mais sobre o projeto, acesse <a target="_blank" href="https://docs.google.com/presentation/d/1oplGx_sFYBkhc1CMc4wUAJZ9IaUa3SkYw1gY3jbOUmU/present">nosso guia</a>.</p>
         </main>
         <footer>
-            <p>este projeto foi orgulhosamente produzido por <a class="signature" href="https://tresdoug.com">Douglas Speck</a></p>
+            <p>este projeto foi orgulhosamente produzido por <a target="_blank" class="signature" href="https://tresdoug.com">Douglas Speck</a></p>
         </footer>
     </body>
 </html>

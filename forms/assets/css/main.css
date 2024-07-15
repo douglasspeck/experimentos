@@ -37,3 +37,7 @@ html, body {
     top: 0;
     left: -100%;
 }
+
+strong {
+    font-weight: bolder;
+}

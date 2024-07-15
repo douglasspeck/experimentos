@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
-        <title>exp.online</title>
+        <title>experimento 2</title>
         
         <!-- META TAGS -->
         <meta charset="UTF-8">
@@ -12,8 +12,8 @@
 
         <!-- SEO -->
         <meta name="author" content="Douglas Speck">
-        <meta name="description" content="Experimentos Online construídos de forma coletiva para divulgar conhecimentos matemáticos">
-        <link rel="canonical" href="https://experimentos.online">
+        <meta name="description" content="Segundo Experimento Colaborativo promovido pela Olimpíada de Matemática da Unicamp">
+        <link rel="canonical" href="https://experimentos.online/2">
         <meta name=”robots” content="index, nofollow">
         <meta name="googlebot" content="index, nofollow">
 
@@ -36,11 +36,11 @@
             </nav>
         </header>
         <main>
-            <p><strong>Experimentos Colaborativos de Matemática</strong> promovidos pela Olimpíada de Matemática da Unicamp (OMU)</p>
-            <section id="gallery">
-                <a href="1"><article><h2>experimento 1</h2></article></a>
-                <a href="2"><article class="open"><h2>experimento 2</h2></article></a>
-            </section>
+            <p>baseado em nosso <a href="/forms/1.html">segundo experimento</a>:</p>
+            <?php $data = json_decode(file_get_contents('https://drive.usercontent.google.com/uc?id=1Likj_YdLFcihcRMrt1tWZjfl89xhy9_O&export=download')); ?>
+            <p id="pi">&pi; = 3.<span data-dec="<?php echo $data->decimals?>" class="correct"><?php echo $data->correct?></span><span class="incorrect"><?php echo $data->incorrect?></span></p>
+            <p>(atualmente, há <?php echo $data->answers?> respostas)</p>
+            <p>para entender mais sobre o projeto, acesse <a target="_blank" href="https://docs.google.com/presentation/d/1oplGx_sFYBkhc1CMc4wUAJZ9IaUa3SkYw1gY3jbOUmU/present">nosso guia</a>.</p>
         </main>
         <footer>
             <p>este projeto foi orgulhosamente produzido por <a target="_blank" class="signature" href="https://tresdoug.com">Douglas Speck</a></p>

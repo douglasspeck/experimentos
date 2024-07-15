@@ -28,10 +28,19 @@
         <link rel="stylesheet" href="/assets/css/main.css?t=<?php echo date('YmdHis'); ?>" type="text/css">
     </head>
     <body>
-        <h1>Formulários de Coleta</h1>
-        <p>Sua curiosidade te trouxe até aqui, mas não há muito para ver. Acesse um de nossos experimentos abaixo:</p>
-        <ul>
-            <li><a href="1">Experimento 1: Projeto Interativo (PI)</a></li>
-        </ul>
+        <header>
+            <h1>exp.online</h1>
+            <nav>
+                <a href="/">home</a>
+                <a href="/forms/">forms</a>
+            </nav>
+        </header>
+        <main>
+            <p>Acesse um de nossos experimentos abaixo:</p>
+            <section id="gallery">
+                <a href="1"><article><h2>experimento 1</h2></article></a>
+                <a href="2"><article class="open"><h2>experimento 2</h2></article></a>
+            </section>
+        </main>
     </body>
 </html>

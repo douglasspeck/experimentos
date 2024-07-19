@@ -37,7 +37,7 @@
         </header>
         <main>
             <p>baseado em nosso <a href="/forms/1.html">segundo experimento</a>:</p>
-            <?php $data = json_decode(file_get_contents('https://drive.usercontent.google.com/uc?id=1Likj_YdLFcihcRMrt1tWZjfl89xhy9_O&export=download')); ?>
+            <?php $data = json_decode(file_get_contents('https://drive.usercontent.google.com/uc?id=1JALZdBxd4D2ZP1BcOR4tUqvBCYWVuin8&export=download')); ?>
             <p id="pi">&pi; = 3.<span data-dec="<?php echo $data->decimals?>" class="correct"><?php echo $data->correct?></span><span class="incorrect"><?php echo $data->incorrect?></span></p>
             <p>(atualmente, há <?php echo $data->answers?> respostas)</p>
             <p>para entender mais sobre o projeto, acesse <a target="_blank" href="https://docs.google.com/presentation/d/1oplGx_sFYBkhc1CMc4wUAJZ9IaUa3SkYw1gY3jbOUmU/present">nosso guia</a>.</p>
